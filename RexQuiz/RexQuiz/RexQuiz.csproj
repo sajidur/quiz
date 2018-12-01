@@ -8,6 +8,93 @@
     <PackageReference Include="AdminLTE" Version="2.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Assets\404.html" />
+    <None Include="wwwroot\Assets\500.html" />
+    <None Include="wwwroot\Assets\base\breadcrumb.html" />
+    <None Include="wwwroot\Assets\base\cards.html" />
+    <None Include="wwwroot\Assets\base\carousel.html" />
+    <None Include="wwwroot\Assets\base\collapse.html" />
+    <None Include="wwwroot\Assets\base\forms.html" />
+    <None Include="wwwroot\Assets\base\jumbotron.html" />
+    <None Include="wwwroot\Assets\base\list-group.html" />
+    <None Include="wwwroot\Assets\base\navs.html" />
+    <None Include="wwwroot\Assets\base\pagination.html" />
+    <None Include="wwwroot\Assets\base\popovers.html" />
+    <None Include="wwwroot\Assets\base\progress.html" />
+    <None Include="wwwroot\Assets\base\scrollspy.html" />
+    <None Include="wwwroot\Assets\base\switches.html" />
+    <None Include="wwwroot\Assets\base\tables.html" />
+    <None Include="wwwroot\Assets\base\tabs.html" />
+    <None Include="wwwroot\Assets\base\tooltips.html" />
+    <None Include="wwwroot\Assets\blank.html" />
+    <None Include="wwwroot\Assets\buttons\brand-buttons.html" />
+    <None Include="wwwroot\Assets\buttons\button-group.html" />
+    <None Include="wwwroot\Assets\buttons\buttons.html" />
+    <None Include="wwwroot\Assets\buttons\dropdowns.html" />
+    <None Include="wwwroot\Assets\charts.html" />
+    <None Include="wwwroot\Assets\colors.html" />
+    <None Include="wwwroot\Assets\css\style.css" />
+    <None Include="wwwroot\Assets\css\style.css.map" />
+    <None Include="wwwroot\Assets\css\style.min.css" />
+    <None Include="wwwroot\Assets\css\style.min.css.map" />
+    <None Include="wwwroot\Assets\icons\coreui-icons.html" />
+    <None Include="wwwroot\Assets\icons\flags.html" />
+    <None Include="wwwroot\Assets\icons\font-awesome.html" />
+    <None Include="wwwroot\Assets\icons\simple-line-icons.html" />
+    <None Include="wwwroot\Assets\img\avatars\1.jpg" />
+    <None Include="wwwroot\Assets\img\avatars\2.jpg" />
+    <None Include="wwwroot\Assets\img\avatars\3.jpg" />
+    <None Include="wwwroot\Assets\img\avatars\4.jpg" />
+    <None Include="wwwroot\Assets\img\avatars\5.jpg" />
+    <None Include="wwwroot\Assets\img\avatars\6.jpg" />
+    <None Include="wwwroot\Assets\img\avatars\7.jpg" />
+    <None Include="wwwroot\Assets\img\avatars\8.jpg" />
+    <None Include="wwwroot\Assets\img\brand\logo.svg" />
+    <None Include="wwwroot\Assets\img\brand\sygnet.svg" />
+    <None Include="wwwroot\Assets\img\favicon.ico" />
+    <None Include="wwwroot\Assets\index.html" />
+    <None Include="wwwroot\Assets\js\charts.js" />
+    <None Include="wwwroot\Assets\js\charts.js.map" />
+    <None Include="wwwroot\Assets\js\colors.js" />
+    <None Include="wwwroot\Assets\js\colors.js.map" />
+    <None Include="wwwroot\Assets\js\main.js" />
+    <None Include="wwwroot\Assets\js\main.js.map" />
+    <None Include="wwwroot\Assets\js\popovers.js" />
+    <None Include="wwwroot\Assets\js\popovers.js.map" />
+    <None Include="wwwroot\Assets\js\src\charts.js" />
+    <None Include="wwwroot\Assets\js\src\colors.js" />
+    <None Include="wwwroot\Assets\js\src\main.js" />
+    <None Include="wwwroot\Assets\js\src\popovers.js" />
+    <None Include="wwwroot\Assets\js\src\tooltips.js" />
+    <None Include="wwwroot\Assets\js\src\widgets.js" />
+    <None Include="wwwroot\Assets\js\tooltips.js" />
+    <None Include="wwwroot\Assets\js\tooltips.js.map" />
+    <None Include="wwwroot\Assets\js\widgets.js" />
+    <None Include="wwwroot\Assets\js\widgets.js.map" />
+    <None Include="wwwroot\Assets\login.html" />
+    <None Include="wwwroot\Assets\notifications\alerts.html" />
+    <None Include="wwwroot\Assets\notifications\badge.html" />
+    <None Include="wwwroot\Assets\notifications\modals.html" />
+    <None Include="wwwroot\Assets\register.html" />
+    <None Include="wwwroot\Assets\scss\style.scss" />
+    <None Include="wwwroot\Assets\scss\vendors\pace-progress\pace.scss" />
+    <None Include="wwwroot\Assets\scss\vendors\_variables.scss" />
+    <None Include="wwwroot\Assets\scss\_custom.scss" />
+    <None Include="wwwroot\Assets\scss\_variables.scss" />
+    <None Include="wwwroot\Assets\typography.html" />
+    <None Include="wwwroot\Assets\vendors\pace-progress\css\pace.css" />
+    <None Include="wwwroot\Assets\vendors\pace-progress\css\pace.css.map" />
+    <None Include="wwwroot\Assets\vendors\pace-progress\css\pace.min.css" />
+    <None Include="wwwroot\Assets\vendors\pace-progress\css\pace.min.css.map" />
+    <None Include="wwwroot\Assets\widgets.html" />
   </ItemGroup>
 
 </Project>
