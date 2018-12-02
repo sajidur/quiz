@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Assets\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\Assets\404.html" />
     <None Include="wwwroot\Assets\500.html" />
     <None Include="wwwroot\Assets\base\breadcrumb.html" />
