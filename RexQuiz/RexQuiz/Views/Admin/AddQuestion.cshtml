@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewData["Title"] = "AddQuiz";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<main class="main">
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+        </li>
+        <li class="breadcrumb-item active">Add Question</li>
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+               
+            </div>
+        </li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+
+            <!-- /.row-->
+            <div class="row">
+
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong> Question information </strong>Form
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal" action="" method="post">
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="hf-email">Question Type</label>
+                                    <div class="col-md-9">
+                                        <select class="form-control" id="select1" name="select1">
+                                            <option value="0">Please select</option>
+                                            <option value="1">Option #1</option>
+                                            <option value="2">Option #2</option>
+                                            <option value="3">Option #3</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="qName">Question Name</label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="qName" type="email" name="hf-email" placeholder="Write Question">
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="option1">Option 1</label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="option1" type="password" name="hf-password" placeholder="Write Option 1">
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="option2">Option 2</label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="option2" type="password" name="hf-password" placeholder="Write Option 3">
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="option3">Option 3</label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="option3" type="password" name="hf-password" placeholder="Write Option 3">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="option4">Option 4</label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="option4" type="password" name="hf-password" placeholder="Write Option 4">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="answer">Question Answer</label>
+                                    <div class="col-md-9">
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="check1">
+                                            <label class="form-check-label" for="inline-checkbox1">Option 1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox2" type="checkbox" value="check2">
+                                            <label class="form-check-label" for="inline-checkbox2">Option 2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+                                            <label class="form-check-label" for="inline-checkbox3">Option 3</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+                                            <label class="form-check-label" for="inline-checkbox3">Option 4</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm btn-primary" type="submit">
+                                <i class="fa fa-dot-circle-o"></i> Submit
+                            </button>
+                            <button class="btn btn-sm btn-danger" type="reset">
+                                <i class="fa fa-ban"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.col-->
+            </div>
+            <!-- /.row-->
+            <!-- /.row-->
+        </div>
+    </div>
+</main>
+
