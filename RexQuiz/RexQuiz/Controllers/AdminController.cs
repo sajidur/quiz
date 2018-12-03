@@ -15,6 +15,11 @@ namespace RexQuiz.Controllers
             return View();
         }
 
-      
+        public IActionResult AddQuiz()
+        {
+            return View();
+        }
+
+
     }
 }

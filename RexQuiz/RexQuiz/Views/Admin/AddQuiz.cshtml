@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "AddQuiz";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddQuiz</h2>
+
+<div class="col-sm-3"></div>
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong>Horizontal</strong> Form
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" action="" method="post">
+
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hf-email">Question Type</label>
+                    <div class="col-md-9">
+                        <select class="form-control" id="select1" name="select1">
+                            <option value="0">Please select</option>
+                            <option value="1">Option #1</option>
+                            <option value="2">Option #2</option>
+                            <option value="3">Option #3</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hf-email">Question</label>
+                    <div class="col-md-9">
+                        <input class="form-control" id="hf-email" type="email" name="hf-email" placeholder="Write Question">
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hf-password">Option 1</label>
+                    <div class="col-md-9">
+                        <input class="form-control" id="hf-password" type="password" name="hf-password" placeholder="write Option 1">
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hf-password">Option 2</label>
+                    <div class="col-md-9">
+                        <input class="form-control" id="hf-password" type="password" name="hf-password" placeholder="write Option 3">
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hf-password">Option 3</label>
+                    <div class="col-md-9">
+                        <input class="form-control" id="hf-password" type="password" name="hf-password" placeholder="write Option 3">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hf-password">Option 4</label>
+                    <div class="col-md-9">
+                        <input class="form-control" id="hf-password" type="password" name="hf-password" placeholder="write Option 4">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hf-password">Answer</label>
+                    <div class="col-md-9">
+                        <input class="form-control" id="hf-password" type="password" name="hf-password" placeholder="write Question Answer">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-primary" type="submit">
+                <i class="fa fa-dot-circle-o"></i> Submit
+            </button>
+            <button class="btn btn-sm btn-danger" type="reset">
+                <i class="fa fa-ban"></i> Reset
+            </button>
+        </div>
+    </div>
+   
+</div>
