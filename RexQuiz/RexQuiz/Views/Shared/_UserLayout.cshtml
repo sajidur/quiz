@@ -7,9 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
     <title>@ViewData["Title"]</title>
     <!-- Icons-->
     <link href=@Url.Content("~/Assets/node_modules/@coreui/icons/css/coreui-icons.min.css") rel="stylesheet">
@@ -20,43 +20,24 @@
     @*<link href="Assets/css/style.css" rel="stylesheet">*@
     <link href="~/Assets/css/style.css" rel="stylesheet">
     <link href="~/Assets/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
-   
-    @RenderSection("Css",required:false);
-    
-   
+
+    @RenderSection("Css", required: false);
+
+
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
-   
-    <script>
-    window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    // Shared ID
-    gtag('config', 'UA-118965717-3');
-    // Bootstrap ID
-    gtag('config', 'UA-118965717-5');</script>
-    
-    <style>
-        .header-fixed .app-body {
-            margin-top: 32px;
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
         }
-        .card-header {
-            background-color: #22aa99;
-          
-        }
-        .app-header {
-            background-color: #046f60
-        }
-        .navbar-nav .nav-link {
-            color: white
-        }
-        .sidebar .nav-link:hover {
-            background-color: #0fb74b;
-        }
-    </style>
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');</script>
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
     <header class="app-header navbar">
@@ -64,8 +45,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">
-            <img class="navbar-brand-full" src="~/logo/logo5.png" width="89" height="25" alt=" Logo">
-            <img class="navbar-brand-minimized" src="~/logo/logo5.png" width="30" height="30" alt=" Logo">
+            <img class="navbar-brand-full" src="logo/logo2.png" width="89" height="25" alt=" Logo">
+            <img class="navbar-brand-minimized" src="logo/logo.png" width="30" height="30" alt=" Logo">
         </a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>
@@ -166,7 +147,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-title">Components</li>
+                    <li class="nav-title">Tutor Menu</li>
                     <li class="nav-item ">
                         <a class="nav-link" asp-controller="Admin" asp-action="AddQuestion">
                             <i class="nav-icon icon-puzzle"></i> Add Question
@@ -174,25 +155,21 @@
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link" asp-controller="Admin" asp-action="Quiz">
+                        <a class="nav-link" asp-controller="Admin" asp-action="AddQuiz">
                             <i class="nav-icon icon-puzzle"></i> Add Quiz
                         </a>
                     </li>
 
-                    <li class="nav-item ">
-                        <a class="nav-link" asp-controller="Admin" asp-action="ManageQuestion">
-                            <i class="nav-icon icon-puzzle"></i>Manage Question
-                        </a>
-                    </li>
-                    
-                    <a href="#"> <li class="nav-title">LogOut</li></a>
+
+
+
                 </ul>
             </nav>
             <button class="sidebar-minimizer brand-minimizer" type="button"></button>
         </div>
-        @*<div class="clearfix"></div>*@
-       
-             @RenderBody()
+        <div class="clearfix"></div>
+
+        @RenderBody()
     </div>
     <footer class="app-footer">
         <div>
@@ -214,9 +191,10 @@
     <!-- Plugins and scripts required by this view-->
     <script src="~/node_modules/chart.js/dist/Chart.min.js"></script>
     <script src=@Url.Content("~/Assets/node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js")></script>
-<script src="~/Assets/js/main.js"></script>
+    <script src="~/Assets/js/main.js"></script>
 
-@RenderSection("Scripts",required:false);
+    @RenderSection("Scripts", required: false);
 </body>
 </html>
+
 

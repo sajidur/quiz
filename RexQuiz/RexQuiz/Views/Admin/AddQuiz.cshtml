@@ -2,7 +2,59 @@
 @{
     ViewData["Title"] = "AddQuiz";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    @section Css{
+        @*<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet" />
+            <link href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css" rel="stylesheet" />*@
+
+        
+        <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+    }
+    <style>
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
 }
+
+
 <main class="main">
     <!-- Breadcrumb-->
     <ol class="breadcrumb">
@@ -18,11 +70,11 @@
                     <i class="icon-speech"></i>
                 </a>
                 @*<a class="btn" href="./">
-                    <i class="icon-graph"></i>  Dashboard
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-settings"></i>  Settings
-                </a>*@
+                        <i class="icon-graph"></i>  Dashboard
+                    </a>
+                    <a class="btn" href="#">
+                        <i class="icon-settings"></i>  Settings
+                    </a>*@
             </div>
         </li>
     </ol>
@@ -33,35 +85,46 @@
             <div class="row">
 
                 <div class="col-md-9">
+
                     <div class="card">
                         <div class="card-header">
-                            <strong>Quiz</strong> Form
+                            <h5>Modify the quiz</h5> 
                         </div>
+
+
                         <div class="card-body">
                             <form class="form-horizontal" action="" method="post">
-                                
-                                <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="hf-email">Select Quiz Question</label>
-                                    <div class="col-md-9">
-                                        <select class="form-control" id="select1" name="select1">
-                                            <option value="0">Please select</option>
-                                            <option value="1">Option #1</option>
-                                            <option value="2">Option #2</option>
-                                            <option value="3">Option #3</option>
-                                        </select>
 
+                                @*<div class="form-group row">
+                                        <label class="col-md-3 col-form-label" for="hf-email">Select Quiz Question</label>
+                                        <div class="col-md-9">
+                                            <select class="form-control" id="select1" name="select1">
+                                                <option value="0">Please select</option>
+                                                <option value="1">Option #1</option>
+                                                <option value="2">Option #2</option>
+                                                <option value="3">Option #3</option>
+                                            </select>
+
+                                        </div>
+                                    </div>*@
+
+                                <div class="form-group row">
+                                    <label class="col-md-2 col-form-label" for="Quiz">Quiz Name</label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="Quiz" type="text" name="quiz" placeholder="Select Quiz ">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="name">Quiz Name</label>
+                                    <label class="col-md-2 col-form-label" for="name">Quiz Name</label>
                                     <div class="col-md-9">
                                         <input class="form-control" id="name" type="email" name="hf-email" placeholder="Quiz Name">
                                     </div>
                                 </div>
-                               
+
                             </form>
                         </div>
                         <div class="card-footer">
+                            <label class="col-md-2 col-form-label" for="name"></label>
                             <button class="btn btn-sm btn-primary" type="submit">
                                 <i class="fa fa-dot-circle-o"></i> Submit
                             </button>
@@ -69,6 +132,7 @@
                                 <i class="fa fa-ban"></i> Reset
                             </button>
                         </div>
+
                     </div>
 
                 </div>
@@ -78,4 +142,127 @@
             <!-- /.row-->
         </div>
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <table id="example" class="ui celled table" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Start date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>2011/04/25</td>
+
+                    </tr>
+                    <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>2011/07/25</td>
+
+                    </tr>
+                    <tr>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>San Francisco</td>
+                        <td>2009/01/12</td>
+
+                    </tr>
+                    <tr>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Edinburgh</td>
+                        <td>2012/03/29</td>
+
+                    </tr>
+                    <tr>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>2008/11/28</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Donna Snider</td>
+                        <td>Customer Support</td>
+                        <td>New York</td>
+                        <td>2011/01/25</td>
+
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Start date</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+
+        </div>
+
+    </div>
+    <!-- The Modal -->
+
+
 </main>
+@section Scripts{
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("Quiz");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+
+}

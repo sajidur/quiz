@@ -7,9 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
     <title>@ViewData["Title"]</title>
     <!-- Icons-->
     <link href=@Url.Content("~/Assets/node_modules/@coreui/icons/css/coreui-icons.min.css") rel="stylesheet">
@@ -20,13 +20,13 @@
     @*<link href="Assets/css/style.css" rel="stylesheet">*@
     <link href="~/Assets/css/style.css" rel="stylesheet">
     <link href="~/Assets/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
-   
-    @RenderSection("Css",required:false);
-    
-   
+
+    @RenderSection("Css", required: false);
+
+
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
-   
+
     <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -41,20 +41,7 @@
     
     <style>
         .header-fixed .app-body {
-            margin-top: 32px;
-        }
-        .card-header {
-            background-color: #22aa99;
-          
-        }
-        .app-header {
-            background-color: #046f60
-        }
-        .navbar-nav .nav-link {
-            color: white
-        }
-        .sidebar .nav-link:hover {
-            background-color: #0fb74b;
+            margin-top: 33px;
         }
     </style>
 </head>
@@ -72,13 +59,13 @@
         </button>
         <ul class="nav navbar-nav d-md-down-none">
             <li class="nav-item px-3">
-                <a class="nav-link" href="#">Dashboard</a>
+                <a class="nav-link" asp-controller="Tutor" asp-action="Index">Home</a>
             </li>
             <li class="nav-item px-3">
                 <a class="nav-link" href="#">Users</a>
             </li>
             <li class="nav-item px-3">
-                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link" asp-controller="Tutor" asp-action="Index">Invite</a>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
@@ -166,7 +153,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-title">Components</li>
+                    <li class="nav-title">Tutor Menu</li>
                     <li class="nav-item ">
                         <a class="nav-link" asp-controller="Admin" asp-action="AddQuestion">
                             <i class="nav-icon icon-puzzle"></i> Add Question
@@ -174,25 +161,28 @@
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link" asp-controller="Admin" asp-action="Quiz">
+                        <a class="nav-link" asp-controller="Tutor" asp-action="QuizSettings">
                             <i class="nav-icon icon-puzzle"></i> Add Quiz
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-controller="Tutor" asp-action="ManageStudents">
+                            <i class="nav-icon icon-puzzle"></i> Manage Quiz
                         </a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link" asp-controller="Admin" asp-action="ManageQuestion">
-                            <i class="nav-icon icon-puzzle"></i>Manage Question
+                        <a class="nav-link" asp-controller="Tutor" asp-action="ManageStudents">
+                            <i class="nav-icon icon-puzzle"></i> Manage Students
                         </a>
                     </li>
-                    
-                    <a href="#"> <li class="nav-title">LogOut</li></a>
                 </ul>
             </nav>
             <button class="sidebar-minimizer brand-minimizer" type="button"></button>
         </div>
-        @*<div class="clearfix"></div>*@
-       
-             @RenderBody()
+        <div class="clearfix"></div>
+
+        @RenderBody()
     </div>
     <footer class="app-footer">
         <div>
@@ -214,9 +204,9 @@
     <!-- Plugins and scripts required by this view-->
     <script src="~/node_modules/chart.js/dist/Chart.min.js"></script>
     <script src=@Url.Content("~/Assets/node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js")></script>
-<script src="~/Assets/js/main.js"></script>
+    <script src="~/Assets/js/main.js"></script>
 
-@RenderSection("Scripts",required:false);
+    @RenderSection("Scripts", required: false);
 </body>
 </html>
 

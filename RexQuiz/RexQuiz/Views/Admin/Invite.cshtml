@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Invite";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<main class="main">
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+        </li>
+        <li class="breadcrumb-item active">Add Question</li>
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+
+            </div>
+        </li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+
+            <!-- /.row-->
+            <div class="row">
+
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2> Invite People </h2>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal" action="" method="post">
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="email-input" type="email" name="email-input" placeholder="Enter Email or Phone Number">
+                                      
+                                    </div>
+                                    
+                                    <button class="col-md-2 btn btn-sm btn-success" type="submit">
+                                        <i class="fa fa-dot-circle-o"></i> Invite</button>
+
+                                </div>
+                               
+                            </form>
+                        </div>
+                       
+                    </div>
+
+                </div>
+                <!-- /.col-->
+            </div>
+            <!-- /.row-->
+            <!-- /.row-->
+        </div>
+    </div>
+</main>
+

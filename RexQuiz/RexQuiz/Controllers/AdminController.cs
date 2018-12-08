@@ -24,6 +24,20 @@ namespace RexQuiz.Controllers
         {
             return View();
         }
+        public IActionResult Quiz()
+        {
+            return View();
+        }
+
+        public IActionResult Invite()
+        {
+            return View();
+        }
+
+        public IActionResult ManageQuestion()
+        {
+            return View();
+        }
 
 
     }

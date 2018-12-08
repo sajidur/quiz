@@ -1,0 +1,240 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TutorPanelLayout.cshtml";
+}
+
+@section Css{
+    <style>
+
+
+/* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            /*background-color: #fefefe;*/
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+        .modal-title {
+            margin: 0;
+            line-height: 1.42857143;
+        }
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+    </style>
+    
+    
+}
+<main class="main">
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+        </li>
+        <li class="breadcrumb-item active">Add Question</li>
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+
+            </div>
+        </li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+
+            <!-- /.row-->
+            <div class="row">
+
+                <div class="col-md-9">
+                    <div class="col-sm-9 col-lg-12">
+                        <div class="brand-card">
+                            <div class="brand-card-header bg-linkedin">
+
+                                <i class="fa fa-linkedin"></i>
+                                <div class="chart-wrapper" style="background-color: #22aa99">
+                                    <h1 style="color: white; text-align: center">N a m e</h1>
+                                    <canvas id="social-box-chart-3" height="90"></canvas>
+                                </div>
+                            </div>
+                            <div class="brand-card-body" style="padding: 0px">
+                                <div>
+                                    <div class="text-value">500+</div>
+                                    <div class="text-uppercase text-muted small">contacts</div>
+                                </div>
+                                <div>
+                                    <div class="text-value">292</div>
+                                    <div class="text-uppercase text-muted small">feeds</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.col-->
+                </div>
+                <div class="col-md-9">
+                    <div class="col-sm-9 col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+                                ex ea commodo consequat.
+                                <h6 align="center"> Next Step: Add students</h6>
+                            </div>
+
+                           
+                            <div class="col-lg-2" style="padding-bottom: 5px; margin: auto">
+                                <button class="btn btn-pill btn-block btn-success active" type="button" aria-pressed="true" id="Quiz">Add Students</button>
+                            </div>
+                        
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row-->
+                <!-- /.row-->
+            </div>
+
+            
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Invite Students</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <p style="margin-top: 10px; margin-left: 5px;">Enter the information of each student below to add them to your class.</p>
+                    <form class="form-horizontal" action="" method="post">
+                        <div class="form-group row">
+                            <div class="col-md-9">
+                                <input class="form-control" id="email-input" type="email" name="email-input" placeholder="Enter Email..">
+
+                            </div>
+
+                            <button class="col-md-2 btn btn-sm btn-success" type="submit">
+                                <i class="fa fa-dot-circle-o"></i> Invite
+                            </button>
+                            <div class="col-md-9">
+                               OR
+                            </div>
+
+                            <div class="col-md-9">
+                                <input class="form-control" id="email-input" type="email" name="email-input" placeholder="Enter Phone Number..">
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                    
+                    <div class="modal-footer">
+                       
+                    </div>
+
+                </div>
+            </div>
+            
+            
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+    
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+      
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+@section Scripts{ 
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("Quiz");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    
+<script>
+
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+
+
+}
