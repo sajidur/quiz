@@ -1,0 +1,469 @@
+﻿
+@{
+    ViewData["Title"] = "Course";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@*<h2>Course</h2>*@
+
+<body class="courses-page">
+    <div class="page-header">
+        <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">tuanna.design@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                                <p><i class="fa fa-phone"></i>001-1234-88888 </p>
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                    <input type="search" placeholder="What would you like to learn?">
+                                    <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                    <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                                    <li><a asp-controller="Account" asp-action="Index">Login</a></li>
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                 <a asp-controller="Home" asp-action="Index"><img src="~/logo/logo5.png" alt="Logo" /></a> 
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a asp-controller="Home" asp-action="Index" >Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a asp-action="Course" asp-controller="Home" >Courses</a></li>
+                                    <li><a href="#">blog</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                                <div class="header-bar-cart">
+                                    <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+                                </div><!-- .header-bar-search -->
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1>Courses Online</h1>
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumbs">
+                    <ul class="flex flex-wrap align-items-center p-0 m-0">
+                        <li><a asp-action="Index" asp-controller="Home" ><i class="fa fa-home"></i> Home</a></li>
+                        <li>Courses</li>
+                    </ul>
+                </div><!-- .breadcrumbs -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="featured-courses courses-wrap">
+                    <div class="row mx-m-25">
+                        <div class="col-12 col-md-6 px-25">
+                            <div class="course-content">
+                                <figure class="course-thumbnail">
+                                    <a asp-controller="Home" asp-action="CourseDetails"><img src="~/Assets/rex/images/1.jpg" alt=""></a>
+                                </figure><!-- .course-thumbnail -->
+
+                                <div class="course-content-wrap">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a href="#">The Complete Android Developer Course</a></h2>
+
+                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                            <div class="course-author"><a href="#">Ms. Lara Croft </a></div>
+
+                                            <div class="course-date">July 21, 2018</div>
+                                        </div><!-- .course-date -->
+                                    </header><!-- .entry-header -->
+
+                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                        <div class="course-cost">
+                                            $45 <span class="price-drop">$68</span>
+                                        </div><!-- .course-cost -->
+
+                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star-o"></span>
+
+                                            <span class="course-ratings-count">(4 votes)</span>
+                                        </div><!-- .course-ratings -->
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .course-content-wrap -->
+                            </div><!-- .course-content -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 px-25">
+                            <div class="course-content">
+                                <figure class="course-thumbnail">
+                                    <a href="#"><img src="~/Assets/rex/images/2.jpg" alt=""></a>
+                                </figure><!-- .course-thumbnail -->
+
+                                <div class="course-content-wrap">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a href="#">The Ultimate Drawing Course Beginner to Advanced</a></h2>
+
+                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                            <div class="course-author"><a href="#">Michelle Golden</a></div>
+
+                                            <div class="course-date">Mar 14, 2018</div>
+                                        </div><!-- .course-date -->
+                                    </header><!-- .entry-header -->
+
+                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                        <div class="course-cost">
+                                            <span class="free-cost">Free</span>
+                                        </div><!-- .price-drop -->
+
+                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star-o"></span>
+
+                                            <span class="course-ratings-count">(4 votes)</span>
+                                        </div><!-- .course-ratings -->
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .course-content-wrap -->
+                            </div><!-- .course-content -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 px-25">
+                            <div class="course-content">
+                                <figure class="course-thumbnail">
+                                    <a href="#"><img src="~/Assets/rex/images/3.jpg" alt=""></a>
+                                </figure><!-- .course-thumbnail -->
+
+                                <div class="course-content-wrap">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a href="#">The Complete Digital Marketing Course</a></h2>
+
+                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                            <div class="course-author"><a href="#">Ms. Lucius</a></div>
+
+                                            <div class="course-date">Dec 18, 2018</div>
+                                        </div><!-- .course-date -->
+                                    </header><!-- .entry-header -->
+
+                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                        <div class="course-cost">
+                                            $55 <span class="price-drop">$78</span>
+                                        </div><!-- .course-cost -->
+
+                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star-o"></span>
+
+                                            <span class="course-ratings-count">(4 votes)</span>
+                                        </div><!-- .course-ratings -->
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .course-content-wrap -->
+                            </div><!-- .course-content -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 px-25">
+                            <div class="course-content">
+                                <figure class="course-thumbnail">
+                                    <a href="#"><img src="~/Assets/rex/images/4.jpg" alt=""></a>
+                                </figure><!-- .course-thumbnail -->
+
+                                <div class="course-content-wrap">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a href="#">The Unreal Engine Developer Course</a></h2>
+
+                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                            <div class="course-author"><a href="#">Mr. John Wick</a></div>
+
+                                            <div class="course-date">Otc 17, 2018</div>
+                                        </div><!-- .course-date -->
+                                    </header><!-- .entry-header -->
+
+                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                        <div class="course-cost">
+                                            <span class="free-cost">Free</span>
+                                        </div><!-- .course-cost -->
+
+                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star-o"></span>
+
+                                            <span class="course-ratings-count">(4 votes)</span>
+                                        </div><!-- .course-ratings -->
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .course-content-wrap -->
+                            </div><!-- .course-content -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 px-25">
+                            <div class="course-content">
+                                <figure class="course-thumbnail">
+                                    <a href="#"><img src="~/Assets/rex/images/5.jpg" alt=""></a>
+                                </figure><!-- .course-thumbnail -->
+
+                                <div class="course-content-wrap">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a href="#">Progressive Web Apps (PWA) - The Complete Guide</a></h2>
+
+                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                            <div class="course-author"><a href="#">Mr. Tom Redder</a></div>
+
+                                            <div class="course-date">Sep 14, 2018</div>
+                                        </div><!-- .course-date -->
+                                    </header><!-- .entry-header -->
+
+                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                        <div class="course-cost">
+                                            $38 <span class="price-drop">$48</span>
+                                        </div><!-- .course-cost -->
+
+                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star-o"></span>
+
+                                            <span class="course-ratings-count">(4 votes)</span>
+                                        </div><!-- .course-ratings -->
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .course-content-wrap -->
+                            </div><!-- .course-content -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 px-25">
+                            <div class="course-content">
+                                <figure class="course-thumbnail">
+                                    <a href="#"><img src="~/Assets/rex/images/6.jpg" alt=""></a>
+                                </figure><!-- .course-thumbnail -->
+
+                                <div class="course-content-wrap">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a href="#">Cryptocurrency Investment Course 2018</a></h2>
+
+                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                            <div class="course-author"><a href="#">Russell Stephens</a></div>
+
+                                            <div class="course-date">Nov 06, 2018</div>
+                                        </div><!-- .course-date -->
+                                    </header><!-- .entry-header -->
+
+                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                        <div class="course-cost">
+                                            <span class="free-cost">Free</span>
+                                        </div><!-- .course-cost -->
+
+                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star-o"></span>
+
+                                            <span class="course-ratings-count">(4 votes)</span>
+                                        </div><!-- .course-ratings -->
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .course-content-wrap -->
+                            </div><!-- .course-content -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .featured-courses -->
+
+                <div class="pagination flex flex-wrap justify-content-between align-items-center">
+                    <div class="col-12 col-lg-4 order-2 order-lg-1 mt-3 mt-lg-0">
+                        <ul class="flex flex-wrap align-items-center order-2 order-lg-1 p-0 m-0">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 flex justify-content-start justify-content-lg-end col-lg-8 order-1 order-lg-2">
+                        <div class="pagination-results flex flex-wrap align-items-center">
+                            <p class="m-0">Showing 1–3 of 12 results</p>
+
+                            <form>
+                                <select>
+                                    <option>Show: 06</option>
+                                    <option>Show: 12</option>
+                                    <option>Show: 18</option>
+                                    <option>Show: 24</option>
+                                </select>
+                            </form>
+                        </div><!-- .pagination-results -->
+                    </div>
+                </div><!-- .pagination -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-4">
+                <div class="sidebar">
+                    <div class="search-widget">
+                        <form class="flex flex-wrap align-items-center">
+                            <input type="search" placeholder="Search...">
+                            <button type="submit" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
+                        </form><!-- .flex -->
+                    </div><!-- .search-widget -->
+
+                    <div class="cat-links">
+                        <h2>Categories</h2>
+
+                        <ul class="p-0 m-0">
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">MBA Courses</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Web Development</a></li>
+                        </ul>
+                    </div><!-- .cat-links -->
+
+                    <div class="latest-courses">
+                        <h2>Latest Courses</h2>
+
+                        <ul class="p-0 m-0">
+                            <li class="flex flex-wrap justify-content-between align-items-center">
+                                <img src="~/Assets/rex/images/t-1.jpg" alt="">
+
+                                <div class="content-wrap">
+                                    <h3><a href="#">The Complete Financial Analyst Training</a></h3>
+
+                                    <div class="course-cost free-cost">Free</div>
+                                </div><!-- .content-wrap -->
+                            </li>
+
+                            <li class="flex flex-wrap justify-content-between align-items-center">
+                                <img src="~/Assets/rex/images/t-2.jpg" alt="">
+
+                                <div class="content-wrap">
+                                    <h3>
+                                        <a href="#">
+                                            Complete Java
+                                            Masterclass
+                                        </a>
+                                    </h3>
+
+                                    <div class="course-cost free-cost">Free</div>
+                                </div><!-- .content-wrap -->
+                            </li>
+
+                            <li class="flex flex-wrap justify-content-between align-items-center">
+                                <img src="~/Assets/rex/images/t-3.jpg" alt="">
+
+                                <div class="content-wrap">
+                                    <h3><a href="#">The Complete Digital Marketing Course</a></h3>
+
+                                    <div class="course-cost">$24</div>
+                                </div><!-- .content-wrap -->
+                            </li>
+
+                            <li class="flex flex-wrap justify-content-between align-items-center">
+                                <img src="~/Assets/rex/images/t-4.jpg" alt="">
+
+                                <div class="content-wrap">
+                                    <h3>
+                                        <a href="#">
+                                            Photoshop CC 2018
+                                            MasterClass
+                                        </a>
+                                    </h3>
+
+                                    <div class="course-cost">$18</div>
+                                </div><!-- .content-wrap -->
+                            </li>
+                        </ul>
+                    </div><!-- .latest-courses -->
+
+                    <div class="ads">
+                        <img src="~/Assets/rex/images/ads.jpg" alt="">
+                    </div><!-- .ads -->
+
+                </div><!-- .sidebar -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+    <div class="clients-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
+                    <div class="logo-wrap">
+                        <img src="images/logo-1.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-2.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-3.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-4.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-5.png" alt="">
+                    </div><!-- .logo-wrap -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .clients-logo -->
+
+</body>

@@ -28,16 +28,43 @@
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
 
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    // Shared ID
+    gtag('config', 'UA-118965717-3');
+    // Bootstrap ID
+    gtag('config', 'UA-118965717-5');</script>
+    
+    <style>
+        .header-fixed .app-body {
+            margin-top: 32px;
         }
-        gtag('js', new Date());
-        // Shared ID
-        gtag('config', 'UA-118965717-3');
-        // Bootstrap ID
-        gtag('config', 'UA-118965717-5');</script>
+        .card-header {
+            background-color: #22aa99;
+          
+        }
+        .app-header {
+            background-color: #1e4e47
+        }
+        .navbar-nav .nav-link {
+            color: white
+        }
+        .sidebar .nav-link:hover {
+            background-color: #2d6b6a;
+        }
+        .sidebar {
+            background: #103142;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+            color: #dadfe4;
+        }
+    </style>
+    
+
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
     <header class="app-header navbar">
@@ -59,7 +86,7 @@
                 <a class="nav-link" href="#">Users</a>
             </li>
             <li class="nav-item px-3">
-                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link" asp-controller="Student" asp-action="Search" >Search</a>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
@@ -154,11 +181,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item ">
-                        <a class="nav-link" asp-controller="Admin" asp-action="AddQuiz">
-                            <i class="nav-icon icon-puzzle"></i> Add Quiz
-                        </a>
-                    </li>
+                    
 
 
 

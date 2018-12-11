@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Css{ 
+<style>
+
+    .card-header {
+        background-color: white;
+    }
+</style>
+}
+<main class="main">
+
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <ol class=""></ol>
+          
+
+            <div class="row">
+
+               
+                <div class="col-md-9">
+                    <div class="col-sm-9 col-lg-12">
+                        <div class="card">
+
+                            <div class="col-md-12">
+                                <div class="col-sm-9 col-lg-12">
+                                    <div class="col-md-12">
+                                        <div class="card-group">
+                                            <div class="card p-4">
+                                                <div class="card-body">
+                                                    <h1>Search  Quizzes</h1>
+                                                    <p class="text-muted">Please fill all required field</p>
+
+                                                    <div class="form-group">
+                                                        <label class="form-col-form-label" for="inputSuccess1">Title</label>
+                                                        <input class="form-control is-valid" id="inputSuccess1" type="text">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="form-col-form-label" for="inputSuccess1">Quiz Type</label>
+                                                        <select class="form-control is-valid" id="select1" name="select1">
+                                                            <option value="0">Please Select Type</option>
+                                                            <option value="1">Option #1</option>
+                                                            <option value="2">Option #2</option>
+                                                            <option value="3">Option #3</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="form-col-form-label" for="inputSuccess1">Quiz Category</label>
+                                                        <select class="form-control is-valid" id="select1" name="select1">
+                                                            <option value="0">Please Select Category</option>
+                                                            <option value="1">Option #1</option>
+                                                            <option value="2">Option #2</option>
+                                                            <option value="3">Option #3</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="form-col-form-label" for="inputSuccess1">Quiz Level</label>
+                                                        <select class="form-control is-valid" id="select1" name="select1">
+                                                            <option value="0">Please Select Level</option>
+                                                            <option value="1">Option #1</option>
+                                                            <option value="2">Option #2</option>
+                                                            <option value="3">Option #3</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-lg-3" style="padding-bottom: 5px; margin: auto">
+                                                        <div class="col-6">
+                                                            <a href="/Admin/AddQuiz"><button class="btn btn-primary px-4" type="button">GO</button></a>
+                                                        </div>
+                                                    </div>
+
+                                                    @*<div class="col-lg-3" style="padding-bottom: 5px; margin: auto">
+                                    <div class="col-6">
+                                        <a href="/Admin/AddQuiz"><button class="btn btn-primary px-4" type="button">GO</button></a>
+                                    </div>
+                                </div>*@
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- /.row-->
+                                <!-- /.row-->
+                            </div>
+                            <br />
+                            
+                            <div class="col-md-12">
+                                <h4 style="text-align: center; color: darkcyan;font-family: verdana">2 quizzes found</h4>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="col-sm-9 col-lg-12">
+                                    <div class="col-md-12">
+                                        <div class="card-group">
+                                            <div class="card p-4">
+                                                <div class="card-body">
+                                                    <h5>question 1</h5>
+                                                    <p class="text-muted">Created by</p>
+
+
+                                                </div>
+                                                <div class="col-lg-3" style="padding-bottom: 5px; margin: auto">
+                                                    <div class="col-6">
+                                                        <a href="/Admin/AddQuiz"><button class="btn btn-primary px-4" type="button">Quiz</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- /.row-->
+                                <!-- /.row-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.row-->
+                <!-- /.row-->
+            </div>
+            
+
+        </div>
+    </div>
+</main>
+

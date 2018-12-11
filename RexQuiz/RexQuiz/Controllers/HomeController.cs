@@ -29,6 +29,19 @@ namespace RexQuiz.Controllers
             return View();
         }
 
+        public IActionResult CourseDetails()
+        {
+            //ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+        public IActionResult Course()
+        {
+            //ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
