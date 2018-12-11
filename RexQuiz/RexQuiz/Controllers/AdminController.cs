@@ -44,5 +44,10 @@ namespace RexQuiz.Controllers
             return View();
         }
 
+        public IActionResult ManageQuiz()
+        {
+            return View();
+        }
+
     }
 }
