@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewData["Title"] = "PostArtical";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section Css
+ {
+     <style>
+
+         .card {
+             background-color: #e4e5e6;
+         }
+     </style>
+ }
+<main class="main">
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+        </li>
+        <li class="breadcrumb-item active">Add Question</li>
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+
+            </div>
+        </li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+
+            <!-- /.row-->
+            <div class="row">
+
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Add New Post </h5>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal" action="" method="post">
+
+
+                                <div class="form-group">
+                                    <label for="qName">Add New Post</label>
+                                    <input class="form-control" id="qName" type="text" placeholder="Enter title Here">
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-2 col-form-label" for="option2">Quiz pass text</label>
+                                    <div class="col-md-10">
+                                        <textarea name="editor1"></textarea>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-2 col-form-label" for="option4">Add tags</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" id="option4" type="text" name="" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-2 col-form-label" for="option4"> Status</label>
+                                    <div class="form-check form-check-inline mr-1">
+                                        <label class="form-check-label" for="inline-checkbox1">Publish</label>&nbsp;&nbsp;&nbsp;
+                                        <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="check1">
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <label class="col-md-3 col-form-label" for="answer"> </label>
+
+                            <button class="btn btn-sm btn-primary" type="submit">
+                                <i class="fa fa-dot-circle-o"></i> Update
+                            </button>
+                            <button class="btn btn-sm btn-danger" type="reset">
+                                <i class="fa fa-ban"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.col-->
+            </div>
+            <!-- /.row-->
+            <!-- /.row-->
+        </div>
+    </div>
+</main>
+
+@section Scripts
+{
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
+}
+

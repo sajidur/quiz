@@ -48,6 +48,9 @@ namespace RexQuiz.Controllers
         {
             return View();
         }
-
+        public IActionResult PostArtical()
+        {
+            return View();
+        }
     }
 }
