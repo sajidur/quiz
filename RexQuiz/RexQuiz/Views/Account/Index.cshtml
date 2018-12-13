@@ -28,14 +28,14 @@
     <script>
     window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        // Shared ID
-        gtag('config', 'UA-118965717-3');
-        // Bootstrap ID
-        gtag('config', 'UA-118965717-5');</script>
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    // Shared ID
+    gtag('config', 'UA-118965717-3');
+    // Bootstrap ID
+    gtag('config', 'UA-118965717-5');</script>
 </head>
 <body class="app flex-row align-items-center">
     <div class="container">
@@ -52,7 +52,7 @@
                                         <i class="icon-user"></i>
                                     </span>
                                 </div>
-                                <input class="form-control" type="text" placeholder="Username">
+                                <input class="form-control" type="text" placeholder="Username" id="userName">
                             </div>
                             <div class="input-group mb-4">
                                 <div class="input-group-prepend">
@@ -60,11 +60,11 @@
                                         <i class="icon-lock"></i>
                                     </span>
                                 </div>
-                                <input class="form-control" type="password" placeholder="Password">
+                                <input class="form-control" type="password" placeholder="Password" id="password">
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <a asp-controller="Admin" asp-action="Dashboard"><button class="btn btn-primary px-4" type="button">Login</button></a>
+                                    @*<a asp-controller="Admin" asp-action="Dashboard">*@<button class="btn btn-primary px-4" type="button" id="btnLogin">Login</button>@*</a>*@
                                 </div>
                                 <div class="col-6 text-right">
                                     <button class="btn btn-link px-0" type="button">Forgot password?</button>
@@ -91,6 +91,31 @@
     <script src="~/Assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/Assets/node_modules/pace-progress/pace.min.js"></script>
     <script src="~/Assets/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-    @*<script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>*@
+@*<script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>*@
+<script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
+<script>
+    $(document).ready(function() {
+        $("#btnLogin").click(function() {
+            $.ajax({
+                url: 'http://sajidur-001-site3.itempurl.com/api/Account/Login?userName=z@gmail.com&password=Zahid1234*',
+                method: 'POST',
+                contentType:'application/json',
+                data: {
+                    userName:'z@gmail.com',
+                    password: 'Zahid1234*'                                       
+                },
+                success: function(response) {
+                    alert("Login successfully");
+                    //sessionStorage.setItem('accessToken', response.access_token);
+                    //window.location.href();
+                },
+                error: function(jqXHR) {
+                    alert(jqXHR.responseText);
+                    alert(" unsuccessfully");
+                }
+            });
+        });
+    })
+</script>
 </body>
 </html>
