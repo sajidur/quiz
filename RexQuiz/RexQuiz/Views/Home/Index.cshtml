@@ -1,6 +1,7 @@
 ﻿
 @{
     //Layout = null;
+    ViewData["Title"] = "প্রস্তুতি";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 
@@ -62,7 +63,7 @@
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li class="current-menu-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
                                     <li><a href="#">About</a></li>
-                                    <li><a asp-action="Course" asp-controller="Home">Courses</a></li>
+                                    <li><a asp-action="Course" asp-controller="Home">Exam</a></li>
                                     <li><a href="#">blog</a></li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
@@ -113,7 +114,7 @@
                 <div class="row">
                     <div class="col-12">
                         <header class="heading flex justify-content-between align-items-center">
-                            <h2 class="entry-title">Featured Courses</h2>
+                            <h2 class="entry-title">Featured Exam</h2>
 
                             <a class="btn mt-4 mt-sm-0" asp-controller="Home" asp-action="Course" >view all</a>
                         </header><!-- .heading -->
@@ -142,6 +143,7 @@
                                     <div class="course-author"><a href="#">Ms. Lara Croft </a></div>
 
                                 </div><!-- .course-date -->
+                                
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
@@ -150,7 +152,9 @@
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
-
+                                    <div class="course-ratings flex justify-content-end align-items-center">
+                                        <a class="btn mt-4 mt-sm-0" href="/Home/Course">Take Exam</a>
+                                    </div>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -180,9 +184,9 @@
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
-
-
-
+                                    <div class="course-ratings flex justify-content-end align-items-center">
+                                        <a class="btn mt-4 mt-sm-0" href="/Home/Course">Take Exam</a>
+                                    </div>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -212,7 +216,9 @@
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
-
+                                    <div class="course-ratings flex justify-content-end align-items-center">
+                                        <a class="btn mt-4 mt-sm-0" href="/Home/Course">Take Exam</a>
+                                    </div>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -231,7 +237,7 @@
 
                                 <div class="entry-meta flex align-items-center">
                                     <div class="course-author"><a href="#">Ms. Lara Croft </a></div>
-
+                                  
 
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
@@ -242,9 +248,9 @@
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
-
-
-                                    <span class="course-ratings-count">(4 votes)</span>
+                                    <div class="course-ratings flex justify-content-end align-items-center">
+                                        <a class="btn mt-4 mt-sm-0" href="/Home/Course">Take Exam</a>
+                                    </div>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
