@@ -6,18 +6,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RexQuiz.Controllers
 {
-    public class StudentController : Controller
+    public class StudentsController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Quiz()
+        public IActionResult Search()
         {
             return View();
         }
-        public IActionResult Dashboard()
+        public IActionResult StartQuiz()
         {
             return View();
         }

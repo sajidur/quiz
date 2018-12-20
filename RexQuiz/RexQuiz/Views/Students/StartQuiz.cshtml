@@ -1,0 +1,197 @@
+﻿
+@{
+    ViewData["Title"] = "StartQuiz";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+<main class="main">
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+        </li>
+        <li class="breadcrumb-item active">Add Quiz</li>
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+            </div>
+        </li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+
+            <!-- /.row-->
+            <div class="row">
+
+                <div class="col-md-9">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 id="timer" style="color: white"></h1>
+                        </div>
+
+
+                        <div class="card-body">
+                            <form class="form-horizontal" action="" method="post">
+
+                                <div class="form-group">
+                                    <label for="qName"><h3>Question Name Here</h3></label>
+
+                                    <table class="table table-hover">
+                                        <tr style="text-align: center; padding: 2px;">
+                                            <td>fgh1</td>
+                                        </tr>
+                                        <tr style="text-align: center">
+                                            <td>fgh2</td>
+                                        </tr>
+                                        <tr style="text-align: center">
+                                            <td>fgh3</td>
+                                        </tr>
+                                        <tr style="text-align: center">
+                                            <td>fgh4</td>
+                                        </tr>
+                                        <tr style="text-align: right">
+                                            <td><button class="col-md-2 btn btn-sm btn-danger" type="reset">
+                                                <i class="fa fa-ban"></i> End Exam
+                                            </button></td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                               
+
+
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <label class="col-md-2 col-form-label" for="name"></label>
+                            <button class="col-md-2 btn btn-sm btn-primary" type="submit">
+                                <i class="fa fa-dot-circle-o"></i> Next
+                            </button>
+                           
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.col-->
+            </div>
+            <!-- /.row-->
+            <!-- /.row-->
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div id="example_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_length" id="example_length"><label>Show <select name="example_length" aria-controls="example" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="example_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="example"></label></div><table id="example" class="ui celled table dataTable" style="width: 100%;" role="grid" aria-describedby="example_info">
+                    <thead>
+                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 0px;">Name</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 0px;">Position</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 0px;">Office</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 0px;">Start date</th></tr>
+                    </thead>
+                    <tbody>
+
+                    <tr role="row" class="odd">
+                        <td class="sorting_1">Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>2008/11/28</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="sorting_1">Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>San Francisco</td>
+                        <td>2009/01/12</td>
+
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td class="sorting_1">Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Edinburgh</td>
+                        <td>2012/03/29</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="sorting_1">Donna Snider</td>
+                        <td>Customer Support</td>
+                        <td>New York</td>
+                        <td>2011/01/25</td>
+
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td class="sorting_1">Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>2011/07/25</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="sorting_1">Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>2011/04/25</td>
+
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Position</th><th rowspan="1" colspan="1">Office</th><th rowspan="1" colspan="1">Start date</th></tr>
+                    </tfoot>
+                </table><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 6 of 6 entries</div><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="0" tabindex="0" id="example_previous">Previous</a><span><a class="paginate_button current" aria-controls="example" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="example" data-dt-idx="2" tabindex="0" id="example_next">Next</a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">×</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+    <!-- The Modal -->
+
+</main>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        var timeoutHandle;
+
+        function countdown(minutes, seconds) {
+            var seconds = 60;
+            var mins = 30;
+
+            function tick() {
+                var counter = document.getElementById("timer");
+                var current_minutes = mins - 1
+                seconds--;
+                counter.innerHTML =
+                    current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+                if (seconds > 0) {
+                    timeoutHandle = setTimeout(tick, 1000);
+                } else {
+
+                    if (mins > 1) {
+
+                        // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+                        setTimeout(function() {
+                            countdown(mins - 1);
+                        }, 1000);
+
+                    }
+                }
+            }
+            tick();
+        }
+
+        countdown(2);
+    </script>
+}
+

@@ -42,7 +42,7 @@ namespace RexQuiz.Controllers
 
         public IActionResult Register()
         {
-            ViewData["a"] = "zzzz";
+            //ViewData["a"] = "zzzz";
             return View();
         }
 
