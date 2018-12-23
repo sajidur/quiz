@@ -4,7 +4,18 @@
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 
-@*<h2>Course</h2>*@
+@section CssSection
+    {
+    <style>
+        .latest-courses {
+            margin-top: 0px;
+        }
+        .nav-bar {
+            padding: 12px 0;
+        }
+        
+    </style>
+    }
 
 <body class="courses-page">
     <div class="page-header">
@@ -46,16 +57,16 @@
                     <div class="row">
                         <div class="col-9 col-lg-3">
                             <div class="site-branding">
-                                 <a asp-controller="Home" asp-action="Index"><img src="~/logo/logo5.png" alt="Logo" /></a> 
+                                <a asp-controller="Home" asp-action="Index"><img src="~/logo/logoprostuti.png" alt="Logo" /></a>
                             </div><!-- .site-branding -->
                         </div><!-- .col -->
 
                         <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                    <li class="current-menu-item"><a asp-controller="Home" asp-action="Index" >Home</a></li>
+                                    <li class="current-menu-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
                                     <li><a href="#">About</a></li>
-                                    <li><a asp-action="Course" asp-controller="Home" >Exam</a></li>
+                                    <li><a asp-action="Course" asp-controller="Home">Exam</a></li>
                                     <li><a href="#">blog</a></li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
@@ -92,15 +103,15 @@
 
     <div class="container">
         @*<div class="row">
-            <div class="col-12">
-                <div class="breadcrumbs">
-                    <ul class="flex flex-wrap align-items-center p-0 m-0">
-                        <li><a asp-action="Index" asp-controller="Home" ><i class="fa fa-home"></i> Home</a></li>
-                        <li>Exam</li>
-                    </ul>
-                </div><!-- .breadcrumbs -->
-            </div><!-- .col -->
-        </div>*@<!-- .row -->
+                <div class="col-12">
+                    <div class="breadcrumbs">
+                        <ul class="flex flex-wrap align-items-center p-0 m-0">
+                            <li><a asp-action="Index" asp-controller="Home" ><i class="fa fa-home"></i> Home</a></li>
+                            <li>Exam</li>
+                        </ul>
+                    </div><!-- .breadcrumbs -->
+                </div><!-- .col -->
+            </div>*@<!-- .row -->
 
         <div class="row">
             <div class="col-12 col-lg-8">
@@ -125,7 +136,7 @@
 
                                     <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
                                         <div class="course-cost">
-                                            45 
+                                            45
                                         </div><!-- .course-cost -->
 
                                         <div class="course-ratings flex justify-content-end align-items-center">
@@ -149,7 +160,7 @@
                                         <div class="entry-meta flex flex-wrap align-items-center">
                                             <div class="course-author"><a href="#">Michelle Golden</a></div>
 
-                                          
+
                                         </div><!-- .course-date -->
                                     </header><!-- .entry-header -->
 
@@ -342,9 +353,9 @@
 
             <div class="col-12 col-lg-4">
                 <div class="sidebar">
-                  
 
-                 
+
+
 
                     <div class="latest-courses">
                         <h2>Latest Exam</h2>
